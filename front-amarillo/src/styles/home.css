@@ -1,0 +1,40 @@
+body{
+  font-size: 20px;
+}
+.home-container{
+  padding-left: 50px;
+  padding-right: 80px;
+}
+.inline{
+  display: flex;
+}
+.right-container{
+  text-align: center;
+  width: 50%;
+}
+.right-container img{
+ max-width: 450px;  
+}
+.left-container{
+  max-width: 50%;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  max-height: 900px;  
+}
+.form-group{
+    display: inline-grid;
+}
+.form-group input{
+    height: 30px;
+    border-radius: 10px;
+    width: 200px;
+}
+.login-button{
+    display: block!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    margin-top: 35px!important;
+    color: white!important;
+}
+
