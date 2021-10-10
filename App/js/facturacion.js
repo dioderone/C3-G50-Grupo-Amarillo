@@ -65,7 +65,7 @@ function agregarProducto(id_producto, nombre_producto, valor_producto) {
 
 function actualizarTablaDetalle() {
 
-    let str;
+    let str="";
 
     if(factura_detalle.length == 0) {
 
@@ -90,7 +90,7 @@ function actualizarTablaDetalle() {
 
     }
 
-    $('#tbl_factura_detalle').html(str);
+    document.getElementById('tbl_factura_detalle').innerHTML = str;
     calcularSubTotal();
 
 
@@ -98,8 +98,8 @@ function actualizarTablaDetalle() {
 
 function modificarValores(index) {
 
-    let cantidad = $(`#txt_cantidad_${index}`).val();
-    let valor = $(`#txt_valor_${index}`).val();
+    let cantidad =  document.getElementById(`txt_cantidad_${index}`).value;
+    let valor = document.getElementById (`txt_valor_${index}`).value;
 
     if(cantidad <= 0){
 
@@ -131,7 +131,7 @@ function modificarValores(index) {
         factura_detalle[index].cantidad = cantidad;
         factura_detalle[index].valor = valor;
         factura_detalle[index].total = total;
-        $(`#total_${index}`).html(total);
+        document.getElementById(`total_${index}`).innerHTML= total;
 
         calcularSubTotal();
         
